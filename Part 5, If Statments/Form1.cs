@@ -16,30 +16,39 @@ namespace Part_5__If_Statments
         {
             InitializeComponent();
         }
-
-        private void txtAge_TextChanged(object sender, EventArgs e)
+        private void btnSubmitAge_Click(object sender, EventArgs e)
         {
-            int age = Convert.ToInt32(txtAge.Text);
-            if (age < 5)
-            {
-                
-            }
-            else if (age < 10)
-            {
-                
-            }
-            else if (age < 12)
-            {
-                
-            }
-            else if (age < 18)
+            int age;                    // = Convert.ToInt32(txtAge.Text);
+
+            if (Int32.TryParse(txtAge.Text, out age))
             {
 
-            }
-            else
-            {
-                
+                if (age < 5)
+                {
+                    lblStage.Text = ("infant");
+                }
+                else if (age < 11)
+                {
+                    lblStage.Text = ("Child");
+                }
+                else if (age < 13)
+                {
+                    lblStage.Text = ("Pre-Teen");
+                }
+                else if (age < 18)
+                {
+                    lblStage.Text = ("Teen Ager");
+                }
+                else if (age >= 18)
+                {
+                    lblStage.Text = ("adult");
+                }
+                else
+                {
+
+                }
             }
         }
     }
+
 }

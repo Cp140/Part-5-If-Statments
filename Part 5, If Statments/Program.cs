@@ -16,7 +16,7 @@ namespace Part_5__If_Statments
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new window());
+            Application.Run(new IfStatments());
         }
     }
 }
