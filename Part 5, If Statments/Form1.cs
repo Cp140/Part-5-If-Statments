@@ -18,7 +18,7 @@ namespace Part_5__If_Statments
         }
         private void btnSubmitAge_Click(object sender, EventArgs e)
         {
-            int age;                    // = Convert.ToInt32(txtAge.Text);
+            int age;                    
 
             if (Int32.TryParse(txtAge.Text, out age))
             {
